@@ -13,6 +13,8 @@ body {
   background-color: #020a16;
   max-height: 100vh;
   font-family: 'Roboto', sans-serif;
+  position: relative;
+  z-index: -100;
 }
 
 .topNav {
@@ -151,33 +153,55 @@ h1 {
 .sidebar {
   display: none;
   position: absolute;
-  width: 320px;
+  width: 30;
   height: 280px;
-  top: 110px;
-  left: 0;
+  top: 0;
+  left: 150px;
   right: 0;
-  margin: 0 auto;
-  background-color: #fff;
+  /* margin: 0 auto; */
+  background-color: #020a16 !important;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  text-align: center;
+  text-align: left;
   font-size: 1.1rem;
   font-family: 'Barlow Condensed', sans-serif;
+  color: #fff;
+  z-index: 10;
 }
 
 .sidebar > ul {
   display: flex;
   flex-direction: column;
   margin-right: 30px;
+  margin-top: 80px;
 }
 .sidebar > ul li {
-  padding: 20px 0;
+  padding: 10px 0;
   list-style: none;
 }
 .sidebar > ul li:last-child {
   padding-left: 0;
 }
 
+.sidebar_navLink {
+  text-decoration: none;
+  color: unset;
+}
+
+.sidebar_navLink:hover {
+  color: blue;
+}
+
+.socials2 {
+  display: none;
+}
+
 @media (max-width: 500px) {
+  .blur {
+    opacity: 0.6;
+    position: relative;
+    z-index: -1000000;
+  }
+
   html.sidebar-is-open .sidebar {
     display: block;
   }
@@ -201,6 +225,8 @@ h1 {
   }
   .menu {
     display: block;
+    position: relative;
+    z-index: 1000;
   }
 
   .menu > img {
@@ -239,6 +265,14 @@ h1 {
   .upper_section {
     margin-top: 50px;
     margin-bottom: 0;
+  }
+
+  .socials2 {
+    display: block;
+  }
+
+  .fa-linkedin-in{
+    margin: 0 20px;
   }
 
   .lower_section {
