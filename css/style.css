@@ -1,9 +1,18 @@
+@font-face {
+  font-family: 'Allison Tessa Oblique';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Allison Tessa Oblique'),
+    url('Allison Tessa Oblique.woff') format('woff');
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #020a16;
   max-height: 100vh;
+  font-family: 'Roboto', sans-serif;
 }
 
 .topNav {
@@ -18,7 +27,7 @@ body {
   height: 60px;
 }
 
-.logo > img {
+.logo > a > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -34,6 +43,7 @@ body {
 h1 {
   color: #e9e9e9;
   font-size: 23px;
+  margin-bottom: 35px;
 }
 
 .txt_section {
@@ -46,12 +56,15 @@ h1 {
 }
 
 .upper_section > p {
-  color: #e9e9e9;
+  color: #80848a;
+  line-height: 30px;
 }
 
 .lower_section {
   color: #eda700;
-  margin-top: 230px;
+  margin-top: 130px;
+  font-size: 2.5rem;
+  font-family: 'Allison Tessa Oblique';
 }
 
 .profile_pic > img {
@@ -68,7 +81,7 @@ h1 {
 
 .link > a {
   text-decoration: none;
-  color: #e9e9e9;
+  color: #80848a;
 }
 
 .nav > div:nth-child(2) {
@@ -87,7 +100,8 @@ h1 {
   align-items: flex-end;
   padding: 10px 70px;
   margin-bottom: 10px;
-  color: #e9e9e9;
+  color: #80848a;
+  font-size: 12px;
 }
 
 .social_icons {
@@ -134,7 +148,39 @@ h1 {
   justify-content: center;
 }
 
+.sidebar {
+  display: none;
+  position: absolute;
+  width: 320px;
+  height: 280px;
+  top: 110px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.sidebar > ul {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+.sidebar > ul li {
+  padding: 20px 0;
+  list-style: none;
+}
+.sidebar > ul li:last-child {
+  padding-left: 0;
+}
+
 @media (max-width: 500px) {
+  html.sidebar-is-open .sidebar {
+    display: block;
+  }
   .topNav {
     margin-left: 0;
     margin-right: 0;

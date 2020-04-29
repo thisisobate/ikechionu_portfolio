@@ -4,17 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Document</title>
   </head>
   <body>
     <div class="main_container">
       <div class="topNav">
         <div class="logo">
-          <img src="images/logo.png" alt="logo" />
+          <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
         </div>
 
-        <div class="menu">
-          <img src="images/menu.svg" alt="menu" />
+        <div class="sidebar">
+          <ul>
+            <li href="#">About</li>
+            <li href="#">Work</li>
+            <li href="#">Contact</li>
+          </ul>
+        </div>
+
+        <div class="menu main-content">
+          <img
+            src="images/menu.svg"
+            alt="menu"
+            id="myImage"
+            class="hamburger-menu-icon"
+            onClick="toggleSidebar()"
+          />
         </div>
       </div>
 
@@ -33,7 +55,10 @@
 
         <div class="txt_section">
           <div class="upper_section">
-            <h1>HELLO, I'M IKECHI. USER EXPERIENCE DESIGNER.</h1>
+            <h1>
+              HELLO, I'M IKECHI. <br />
+              USER EXPERIENCE DESIGNER.
+            </h1>
             <p>
               I’m a goal-driven team player interested in creating seamless,
               user-friendly products. I integrate well in challenging and
@@ -47,36 +72,34 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <footer>
-        <div class="footer_container">
-          <div class="left">
-            <div class="social_icons">
-              <div class="icon_bg">
-                <img
-                  src="images/twitter.svg"
-                  alt="twitter-icon"
-                  class="social"
-                />
-              </div>
-              <div class="icon_bg md">
-                <img
-                  src="images/linkedin.svg"
-                  alt="linkedin-icon"
-                  class="social"
-                />
-              </div>
-              <div class="icon_bg">
-                <img src="images/email.svg" alt="email-icon" class="social" />
-                &emsp; Designed by Ikechi
-              </div>
+    <footer>
+      <div class="footer_container">
+        <div class="left">
+          <div class="social_icons">
+            <div class="icon_bg">
+              <img src="images/twitter.svg" alt="twitter-icon" class="social" />
+            </div>
+            <div class="icon_bg md">
+              <img
+                src="images/linkedin.svg"
+                alt="linkedin-icon"
+                class="social"
+              />
+            </div>
+            <div class="icon_bg">
+              <img src="images/email.svg" alt="email-icon" class="social" />
+              &emsp; &emsp; &emsp; Designed by Ikechi
             </div>
           </div>
-          <div class="left2">Designed by Ikechi</div>
-          <div class="center">copyright 2020</div>
-          <div class="right">Developed by Emmanuel</div>
         </div>
-      </footer>
-    </div>
+        <div class="left2">Designed by Ikechi</div>
+        <div class="center">copyright &copy; 2020</div>
+        <div class="right">Developed by Emmanuel</div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
   </body>
 </html>
